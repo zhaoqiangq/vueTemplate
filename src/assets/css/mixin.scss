@@ -1,0 +1,66 @@
+//背景图片路径
+$backimg:'../../assets/images/';
+//标准色
+$actcolor: #406ff4;
+//标题色
+$decolor: #001026;
+//正文
+$fontcolor: #62686f;
+//辅助字段
+$fzcolor:#c0c3cc;
+//分割线
+$borcolor:#e9ebee;
+//同等高宽@include
+@mixin whs($size){
+  width: $size;
+  height: $size;
+}
+//高宽@include
+@mixin wh($size,$sizes){
+  width: $size;
+  height: $sizes;
+}
+//上下左右居中
+@mixin tlrb{
+  position: absolute;
+  top:0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+}
+
+//清除浮动percentage
+@mixin clear{
+  &:after{
+    content: "";
+    clear: both;
+    height: 0;
+    line-height: 0;
+    display: block;
+
+  }
+}
+
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #c0c3cc; opacity:1;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #c0c3cc;
+    opacity:1;
+  }
+
+  input:-ms-input-placeholder{
+    color:#c0c3cc;opacity:1;
+  }
+
+  input::-webkit-input-placeholder{
+    color: #c0c3cc;opacity:1;
+  }
+
+input[type=text],input[type=password],input[type=text]:focus, input[type=password]:focus, textarea:focus {
+
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+
+  outline:none;
+
+}
+
